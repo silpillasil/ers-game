@@ -61,27 +61,7 @@ class Card {
     }
 }
 
-document.onkeydown = checkKey;
 
-function checkKey(e) {
-
-    e = e || window.event;
-
-    if (e.keyCode == '38') {
-        // up arrow
-        checkSlappable();
-    }
-    else if (e.keyCode == '40') {
-        // down arrow
-    }
-    else if (e.keyCode == '37') {
-       // left arrow
-    }
-    else if (e.keyCode == '39') {
-       // right arrow
-    }
-
-}
 
 function checkSlappable() {
     console.log("hi");
@@ -123,6 +103,7 @@ function printCardArr(array) {
 
 function playCard(playerList) {
     queue_card = playerList.pop();
+    console.log(queue_card.toString());
     last_top = top_card;
     top_card = queue_card;
     var image = document.querySelector('.currcard');
@@ -148,7 +129,7 @@ function init() {
     console.log(ALL_CARDS.length);
     for (i = 0; i < ALL_CARDS.length; i++) {
         // console.log(i);
-        console.log(ALL_CARDS[i].toString());
+        //console.log(ALL_CARDS[i].toString());
     }
 
 }
@@ -195,5 +176,27 @@ document.addEventListener('DOMContentLoaded', function () { // why do you need t
 
 });
 
-
 init();
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        // up arrow
+        checkSlappable();
+    }
+    else if (e.keyCode == '40') {
+        // down arrow
+        playCard(P0_CARDS);
+    }
+    else if (e.keyCode == '37') {
+       // left arrow
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+    }
+
+}

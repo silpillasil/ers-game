@@ -1,16 +1,23 @@
-img {
-     width:75%;
+
+body {
+  background-image: url('PNG/wp.jpg');
+}
+
+.currcard {
+     width:90%;
      margin: 0 auto;
 }
 
 .button {
   margin-top: 20px;
-  width: 20%;
+  width: 65%;
   line-height: 60px;
   font-weight: bold;
-  padding: 0 40px;
+  /** padding: 0 40px; */
   background: salmon;
   border: none;
+  float:right;
+  display: inline-block;
 }
 .button:hover {
   background: lightsalmon;
@@ -18,7 +25,7 @@ img {
 
 .column {
   float: left;
-  width: 33.33%; 
+  width: 33.33%;
 }
 
 /* Clear floats after the columns */
@@ -26,4 +33,75 @@ img {
   content: "";
   display: table;
   clear: both;
+}
+
+/**
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header header'
+    'player1 player1 cards cards cards player2 player2'
+    'footer footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+} */
+
+.grid-container {
+  display: grid;
+  max-height: 770px;
+  grid-template-rows: 0.5fr 6fr;
+  grid-gap: 2px;
+  background-color: white;
+  padding: 1px;
+}
+
+.top-row {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  background-color: #2196F3;
+  padding: 1px;
+  text-align: center;
+
+}
+
+.mid-row {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr;
+  grid-gap: 4px;
+  grid-column-gap: 1px;
+  justify-items: center;
+  background-color: white;
+  padding: 1px;
+  border: 2px solid white;
+  text-align: center;
+
+}
+
+.item2 {
+    background-color: #2196F3;
+    width: 100%;
+}
+
+.card-panel {
+    background-color: #2196F3;
+    width: `100%;
+}
+
+.item4 {
+    background-color: #2196F3;
+    width: 100%;
+}
+
+.footer {
+    background-color: #2196F3;
+}
+
+.grid-container > div {
+
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
 }

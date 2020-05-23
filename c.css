@@ -1,12 +1,15 @@
 
 body {
-  background-image: url('PNG/wp.jpg');
+  background-image: url('PNG/bn.jpg');
+  background-size: contain;
 }
 
 .currcard {
-     width:90%;
+     height: 100%;
      margin: 0 auto;
 }
+
+
 
 .button {
   margin-top: 20px;
@@ -14,8 +17,9 @@ body {
   line-height: 60px;
   font-weight: bold;
   /** padding: 0 40px; */
-  background: salmon;
+  background: #95086a;
   border: none;
+  border-radius: 25px;
   float:right;
   display: inline-block;
 }
@@ -23,36 +27,14 @@ body {
   background: lightsalmon;
 }
 
-.column {
-  float: left;
-  width: 33.33%;
-}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/**
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header header'
-    'player1 player1 cards cards cards player2 player2'
-    'footer footer footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
-} */
 
 .grid-container {
   display: grid;
-  max-height: 770px;
-  grid-template-rows: 0.5fr 6fr;
+  max-height: 620px;
+  grid-template-rows: 0.5fr 5fr;
   grid-gap: 2px;
-  background-color: white;
+  background-color: rgba(100, 100, 100, 0);
   padding: 1px;
 }
 
@@ -61,7 +43,8 @@ body {
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
-  background-color: #2196F3;
+  color: white;
+  background-color: transparent;
   padding: 1px;
   text-align: center;
 
@@ -69,35 +52,42 @@ body {
 
 .mid-row {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr 1fr;
+  grid-template-columns: 0.7fr 1.5fr 0.7fr 1fr;
   grid-gap: 4px;
+  max-height: 700px;
   grid-column-gap: 1px;
   justify-items: center;
-  background-color: white;
-  padding: 1px;
-  border: 2px solid white;
+  background-color: rgba(100, 100, 100, 0);
   text-align: center;
 
 }
 
-.item2 {
-    background-color: #2196F3;
+.inactive-player {
+    background-color: rgba(108, 4, 77, 0.60);
+    color: white;
     width: 100%;
+    border-radius: 25px;
+    box-sizing:border-box;
+    padding: 30px;
 }
 
 .card-panel {
-    background-color: #2196F3;
-    width: `100%;
+    background-color: rgba(100, 100, 100, 0);
+    align-items: center;
+    height: 600px;
+    width: 80%;
+    box-sizing:border-box;
+
 }
 
-.item4 {
-    background-color: #2196F3;
-    width: 100%;
+.sidebar {
+    background-color: rgba(76, 175, 80, 0.3);
+    width: 70%;
+    border-radius: 25px;
+    padding: 30px;
+
 }
 
-.footer {
-    background-color: #2196F3;
-}
 
 .grid-container > div {
 

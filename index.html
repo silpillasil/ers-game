@@ -2,36 +2,60 @@
 <html>
     <body style="font-family:'Verdana'">
         <link rel="stylesheet" type="text/css" href="c.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="app.js"></script>
 
         <div class="grid-container">
 
             <!-- top row -->
             <div class="top-row">
-                <div class="button" id="begin">
-                  start game
-                </div>
                 <div class="game-title">
                      play !!
                 </div>
-                <div class="button" id="deal">
+
+                <div class="act-button" id="begin">
+                  start game
+                </div>
+
+                <div class="inv-button" id="deal">
                   deal cards!
                 </div>
+
+                <div class="game-title">
+                     play !!
+                </div>
+
+                <div class="game-title">
+                     play !!
+                </div>
+
+                <div class="game-title">
+                     play !!
+                </div>
+
+
             </div>
 
             <!-- middle row -->
             <div class="mid-row">
+                <div class="blank">
+
+                </div>
                 <div class="inactive-player">
-                    player1
+                    <p id="p-1-title">player 1</p>  cards in hand: 26
                 </div>
                 <div class="card-panel">
-                    <img src="PNG/card_back.png" alt="currcard" class="currcard" style="display:block;margin-left:auto;margin-right:auto;" align="center"/>
+                    <img src="PNG/card_back.png" alt="currcard" class="currcard" style="display:block;margin-left:auto;margin-right:auto;align:center" />
                 </div>
                 <div class="inactive-player">
-                    player22222
+                    <p id="p-2-title">player 2</p> cards in hand: 26
                 </div>
                 <div class="sidebar">
                     info here.
+                </div>
+                <div class="blank">
+
                 </div>
             </div>
 

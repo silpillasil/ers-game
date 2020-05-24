@@ -1,5 +1,7 @@
 // SETUP
 
+$(".inactive-player").height($(".card-panel").height());
+
 var ALL_CARDS, P0_CARDS, P1_CARDS;
 var TVAL_D;
 var bottom_card, top_card, recent_cards, queue_card;
